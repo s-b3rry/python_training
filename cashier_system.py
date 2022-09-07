@@ -1,3 +1,5 @@
+# Simple cashier system, optimized for german use, where writing prices with , is common
+
 import locale
 locale.setlocale(locale.LC_ALL, 'de_DE')
 
