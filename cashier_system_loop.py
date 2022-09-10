@@ -20,8 +20,11 @@ while answer == "j":
     payment = locale.atof(payment)
     change = payment - new_price
 
-    print("Gegeben:", locale.format_string('%.2f', payment), "€, Preis:", locale.format_string('%.2f', new_price), "€")
-    print("Change:", locale.format_string('%.2f', change), "€")
-    answer = input("Weiter machen? Dann gib bitte 'j' ein: ")
+    if change < 0:
+        print("Das gezahlte Geld reicht nicht aus.")
+    else:
+        print("Gegeben:", locale.format_string('%.2f', payment), "€, Preis:", locale.format_string('%.2f', new_price), "€")
+        print("Change:", locale.format_string('%.2f', change), "€")
+        answer = input("Weiter machen? Dann gib bitte 'j' ein: ")
 
 print("Beendet.")
