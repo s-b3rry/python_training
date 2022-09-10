@@ -1,6 +1,5 @@
-# Extension of the cashier system program.
-# User don't want to restart the program everytime after use. So here they get asked, if they want to keep on using the
-# cashier system. If they type "j", for the german word "ja", the loop keeps on running.
+# Alternative version of the cashier system program with Loops
+
 import locale
 locale.setlocale(locale.LC_ALL, 'de_DE')
 
@@ -23,7 +22,8 @@ while answer == "j":
     if change < 0:
         print("Das gezahlte Geld reicht nicht aus.")
     else:
-        print("Gegeben:", locale.format_string('%.2f', payment), "€, Preis:", locale.format_string('%.2f', new_price), "€")
+        print("Gegeben:", locale.format_string('%.2f', payment),
+              "€, Preis:", locale.format_string('%.2f', new_price), "€")
         print("Change:", locale.format_string('%.2f', change), "€")
         answer = input("Weiter machen? Dann gib bitte 'j' ein: ")
 
